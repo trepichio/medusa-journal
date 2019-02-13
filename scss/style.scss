@@ -101,7 +101,8 @@ main {
 			#period { 
 				display: none; 
 				@media screen and (min-width: 550px){
-					display: inline;
+					display: inline-block;
+					margin-left: -1.2rem;
 				}
 				
 			}

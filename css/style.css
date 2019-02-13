@@ -90,7 +90,8 @@ main {
       display: none; }
       @media screen and (min-width: 550px) {
         main h1#issue-info #issue #period {
-          display: inline; } }
+          display: inline-block;
+          margin-left: -1.2rem; } }
     @media screen and (min-width: 550px) {
       main h1#issue-info {
         align-self: flex-start;

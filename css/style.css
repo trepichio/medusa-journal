@@ -66,29 +66,85 @@ header {
         margin-left: 1rem; } }
 
 /* Main section */
-main figure {
-  font-family: 'JaneAusten'; }
-  main figure img {
+main {
+  display: flex;
+  flex-direction: column; }
+  @media screen and (min-width: 550px) {
+    main {
+      flex-direction: row; } }
+  main h1#issue-info {
+    position: relative;
+    align-self: flex-end;
+    z-index: 10;
     width: 100%;
-    height: auto; }
-  main figure figcaption {
-    text-align: center;
-    color: #c4bdb0; }
-
-#issue-info {
-  margin: 0;
-  padding: 0;
-  color: #ababab;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  text-align: right;
-  margin-right: 1rem; }
+    color: #ababab;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 1.8rem;
+    margin-right: 1.4rem;
+    word-spacing: 1rem;
+    text-align: right; }
+    main h1#issue-info #issue sup {
+      font-size: 50%; }
+    main h1#issue-info #issue #period {
+      display: none; }
+      @media screen and (min-width: 550px) {
+        main h1#issue-info #issue #period {
+          display: inline; } }
+    @media screen and (min-width: 550px) {
+      main h1#issue-info {
+        align-self: flex-start;
+        font-size: 4rem;
+        font-weight: bold;
+        width: 25%; }
+        main h1#issue-info #volume {
+          position: absolute;
+          font-size: 8.5rem;
+          transform: rotateZ(-90deg);
+          top: 13rem;
+          left: -11rem; }
+        main h1#issue-info #issue {
+          position: absolute;
+          top: 36rem;
+          left: 3rem; } }
+  main figure {
+    font-family: 'JaneAusten';
+    align-self: center;
+    position: relative; }
+    main figure img {
+      display: block;
+      margin: 0 auto;
+      width: 60%;
+      margin-top: -6rem; }
+      @media screen and (min-width: 550px) {
+        main figure img {
+          margin: 0;
+          width: 80%; } }
+      @media screen and (min-width: 750px) {
+        main figure img {
+          width: 90%; } }
+    main figure figcaption {
+      color: #c4bdb0;
+      display: none; }
+      @media screen and (min-width: 550px) {
+        main figure figcaption {
+          display: block;
+          font-size: 1.9rem;
+          margin-left: -10rem; } }
+      @media screen and (min-width: 750px) {
+        main figure figcaption {
+          position: absolute;
+          transform: rotateZ(-90deg);
+          width: 200%;
+          top: 15rem;
+          left: 15rem; } }
 
 /* Footer section */
 footer {
   font-family: 'Aspira';
   border-top: 1px solid #000;
-  padding: 1rem 0; }
+  padding: 1rem 0;
+  margin-top: 1rem; }
   footer time {
     display: block;
     text-align: center;

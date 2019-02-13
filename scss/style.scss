@@ -76,29 +76,93 @@ header {
 
 /* Main section */
 main {
-	// padding-bottom: 2rem;
+	display: flex;
+	flex-direction: column;
+
+	@media screen and (min-width: 550px) {
+		flex-direction: row;
+	}
+
+
+	h1#issue-info {
+		position: relative;
+		align-self: flex-end;
+		z-index: 10;
+		width: 100%;
+		color: hsl(0,0%,67%);
+		text-transform: uppercase;
+		font-weight: lighter;
+		font-size: 1.8rem;
+		margin-right: 1.4rem;
+		word-spacing: 1rem;
+		text-align: right;
+		#issue {
+			sup { font-size: 50%; }
+			#period { 
+				display: none; 
+				@media screen and (min-width: 550px){
+					display: inline;
+				}
+				
+			}
+		}
+
+		@media screen and (min-width: 550px) {
+			align-self: flex-start;
+			font-size: 4rem;
+			font-weight: bold;
+			width: 25%;
+			#volume {
+				position: absolute;
+				// display: block;
+				font-size: 8.5rem;
+				transform: rotateZ(-90deg);
+				top: 13rem;left: -11rem;
+			}
+			#issue {
+				position: absolute;
+				top: 36rem;
+				left: 3rem;
+			}
+		}
+	}
 
 	figure {
 		font-family: 'JaneAusten';
+		align-self: center;
+		position: relative;
 		img {
-			width: 100%;
-			height: auto;
+			display: block;
+			margin: 0 auto;
+			width: 60%;
+			margin-top: -6rem;
+			@media screen and (min-width: 550px) {
+				margin: 0;
+				width: 80%;
+			}
+			@media screen and (min-width: 750px) {
+				width: 90%;
+			}
 		}
 
 		figcaption {
-			text-align: center;
-			color: hsl(38, 15%, 73%);			
+			color: hsl(38, 15%, 73%);		
+			display: none;
+
+			 @media screen and (min-width: 550px) {
+			 	display: block;
+				font-size: 1.9rem;
+			 	margin-left: -10rem;
+			} 
+
+			@media screen and (min-width: 750px) {
+				position: absolute;
+				transform: rotateZ(-90deg);
+				width: 200%;
+				top: 15rem; left: 15rem;
+			}
 		}
 	}
-}
-
-#issue-info {
-	margin: 0; padding: 0;
-	color: hsl(0,0%,67%);
-	text-transform: uppercase;
-	font-size: 1.5rem;
-	text-align: right;
-	margin-right: 1rem;
 }
 
 /* Footer section */
@@ -106,6 +170,7 @@ footer {
 	font-family: 'Aspira';
 	border-top: 1px solid #000;
 	padding: 1rem 0;
+	margin-top: 1rem;
 	time {
 		display: block;
 		text-align: center;

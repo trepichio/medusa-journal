@@ -21,28 +21,56 @@ body {
 section {
 	border: 1px solid #000;
 	box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, .5);
+	max-width: 750px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
 }
 
 /* Header section */
 header {
-
-	text-align: center;
+	display: flex;
+	flex-direction: column;	
+	@media screen and (min-width: 650px) {
+		flex-direction: row;
+		overflow: hidden;
+	}
 
 	h1 {
-		margin: 0;
-		margin-top: 5%;
-		font-size: 8rem;
+		text-align: center;
+		font-size: 5rem;
+		margin: 0;padding: 0;
+		margin-top: 40px;
+		line-height: 0.8;
+		@media screen and (min-width: 550px) {
+			text-align: right;
+			flex-grow: 0;
+			font-size: 13rem;
+			margin-right: 40px;
+			margin-bottom: 15px;
+		}
+		@media screen and (min-width: 650px) {
+			order: 2;
+		}
 	}
 
 	h2 {
+		margin: 0;
 		font-family: 'Aspira';
-		font-weight: lighter;
-		width: 100%;
 		text-transform: uppercase;
 		border: 1px solid currentcolor;
 		border-right: 0; border-left: 0;
-		font-size: 2rem;
-		padding: 1.5rem 2rem;
+		font-size: 2.1rem;
+		padding: 1.5rem 0;
+		text-align: center;
+
+		@media screen and (min-width: 650px) {
+			width: 270px;
+			align-self: center;
+		}
+		@media screen and (min-width: 750px) {
+			margin-left: 1rem;
+		}
 	}
 }
 
